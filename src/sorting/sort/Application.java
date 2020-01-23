@@ -8,6 +8,7 @@ public class Application {
 		int[] intArr = new int [] {11, 1,6,2, 8,9};
 		System.out.println(Arrays.toString(intArr));
 		System.out.println(Arrays.toString(BubbleSort.sort(intArr)));
+		System.out.println(Arrays.toString(InsertionSort.sortIncreasing(intArr)));
 
 	}
 

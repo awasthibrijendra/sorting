@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order
+ * @author bxa721
+ *
+ */
 public class BubbleSort {
 	
 	public static List<Sorttable> sort(List<Sorttable> elements){
@@ -42,5 +47,27 @@ public class BubbleSort {
 		
 		return arrayElements;
 	}
+	
+	//https://www.youtube.com/watch?v=o4bAoo_gFBU&list=PLdo5W4Nhv31bEiyP4tclZMc5mP_X7OD7k
+	static int[] sortImproved(int[] a) {
+		for(int i=0;i<a.length; i++) {
+			boolean moreToSort =false;
+			for(int j=0; j<a.length-1; j++) {
+				if(a[j] > a[j + 1]) {
+					int tmp = a[j];
+					a[j] = a[j + 1];
+					a[j + 1]= tmp;
+					moreToSort= true;
+				}
+			}
+			//no sorting is done in the above loop that means the loop is sorted
+			if(!moreToSort) {
+				break;
+			}
+			
+		}
+		return a;
+
+	 }
 
 }
